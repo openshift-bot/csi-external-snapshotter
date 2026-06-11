@@ -89,7 +89,7 @@ func TestIsVolumeSnapshotGroupMember(t *testing.T) {
 					Namespace: "default",
 					OwnerReferences: []metav1.OwnerReference{
 						{
-							APIVersion: "groupsnapshot.storage.k8s.io/v1",
+							APIVersion: "groupsnapshot.storage.k8s.io/v1beta2",
 							Kind:       "VolumeGroupSnapshot",
 							Name:       "vgs",
 						},
@@ -191,7 +191,7 @@ func TestNeedToAddVolumeGroupSnapshotOwnership(t *testing.T) {
 				ObjectMeta: metav1.ObjectMeta{
 					OwnerReferences: []metav1.OwnerReference{
 						{
-							APIVersion: "groupsnapshot.storage.k8s.io/v1",
+							APIVersion: "groupsnapshot.storage.k8s.io/v1beta2",
 							Kind:       "VolumeGroupSnapshot",
 							Name:       "vgs",
 						},
